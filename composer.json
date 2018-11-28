@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jacobcyl\\AliOSS\\": "src/"
+            "PingCheng\\AliOSS\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jacobcyl\\AliOSS\\AliOssServiceProvider"
+                "PingCheng\\AliOSS\\AliOssServiceProvider"
             ]
         }
     }
