@@ -6,7 +6,7 @@
  * Time: 下午8:31
  */
 
-namespace Jacobcyl\AliOSS\Plugins;
+namespace PingCheng\AliOSS\Plugins;
 
 use Illuminate\Support\Facades\Log;
 use League\Flysystem\Config;

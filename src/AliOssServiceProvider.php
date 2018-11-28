@@ -1,9 +1,9 @@
 <?php
 
-namespace Jacobcyl\AliOSS;
+namespace PingCheng\AliOSS;
 
-use Jacobcyl\AliOSS\Plugins\PutFile;
-use Jacobcyl\AliOSS\Plugins\PutRemoteFile;
+use PingCheng\AliOSS\Plugins\PutFile;
+use PingCheng\AliOSS\Plugins\PutRemoteFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;

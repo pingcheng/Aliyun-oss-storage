@@ -5,7 +5,7 @@
  * Time: 下午 17:07
  */
 
-namespace Jacobcyl\AliOSS;
+namespace PingCheng\AliOSS;
 
 use Dingo\Api\Contract\Transformer\Adapter;
 use League\Flysystem\Adapter\AbstractAdapter;
@@ -449,15 +449,10 @@ class AliOssAdapter extends AbstractAdapter
     public function readStream($path)
     {
         $result = $this->readObject($path);
-        if (is_resource($result['raw_contents'])) {
-            $result['stream'] = $result['raw_contents'];
-            // Ensure the EntityBody object destruction doesn't close the stream
-            $result['raw_contents']->detachStream();
-        } else {
-            $result['stream'] = fopen('php://temp', 'r+');
-            fwrite($result['stream'], $result['raw_contents']);
-        }
+        $result['stream'] = $result['raw_contents'];
         rewind($result['stream']);
+        // Ensure the EntityBody object destruction doesn't close the stream
+        $result['raw_contents']->detachStream();
         unset($result['raw_contents']);
 
         return $result;
